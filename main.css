@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items: center;
+    position:sticky;
+
+}
+
+.header a:link, .header a:visited,
+.header a:hover, .header a:active {
+    text-decoration: none;
+    color: black;
+    /* font-weight: 600; */
+}
