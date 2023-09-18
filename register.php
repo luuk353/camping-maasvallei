@@ -1,3 +1,7 @@
+<?php
+include_once "php/connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,27 +14,17 @@
 <body>
     <?php include_once("includes/header.php") ?>
 
-    <div class="register">
-        <!-- TODO: Link to backend -->
-        <form action="#" method="post" class="login">
-            <h1>Registeren</h1>
-            
-            <label for="naam">Voornaam en achternaam</label>
-            <input type="text" name="name" id="name" placeholder="Bijv: Jan van Huis">
-            
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email invullen...">
+    <div class="content">
+                <form name ="form" id="formulier-register" action="php/accountregister.php" method="post">
+                <P>maak hier uw account aan: </P><br>
+                <input type="text" name="username" placeholder="username" ><br>
+                <p>maak hier uw wachtwoord aan:</p><br>
+                <input type="password" name="password" placeholder="password"><br>
+                <p> maak hier uw forgotcode aan, BEWAAR DEZE GOED!<br>(maximaal 5 cijfers)</p><br>
+                <input type = "password" name = "forgotcode" placeholder = "forgotcode"> <br>
+                <input type="submit" value="submit" name="submit"> <p> heeft u al een account? klik <a href = "login.php">hier </a>om in te loggen.</p>
     
-            <label for="password">Wachtwoord</label>
-            <input type="password" name="password" id="password" placeholder="Wachtwoord invullen...">
-    
-            <label for="password">Wachtwoord nog een keer</label>
-            <input type="password" name="password-repeat" id="password-repeat" placeholder="Wachtwoord invullen...">
-            
-            <input type="submit" value="Registeren">
-            
-            <a href="./login.php">Inloggen</a>
-        </form>
+            </form>
     </div>
 </body>
 </html>

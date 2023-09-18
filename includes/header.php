@@ -10,5 +10,5 @@
     <h1>Tarieven</h1>
     <h1>Reserveren</h1>
     <h1>Bistro</h1>
-    <a href="login.php"><h1>Inloggen</h1></a>
+    <a href="./login.php"><h1>Inloggen</h1></a>
 </nav>
