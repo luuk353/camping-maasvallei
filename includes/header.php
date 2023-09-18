@@ -7,7 +7,7 @@
     <a href="#"><h3>Klachten</h3></a>
     
     <!-- Alleen te zien als je niet ingelogd bent -->
-    <a href="login.php"><h3>Inloggen</h1></a>
+    <a href="./login.php"><h3>Inloggen</h1></a>
 
     <!-- Alleen voor medewerkers te zien -->
     <a href="#"><h3>Agenda</h3></a>
