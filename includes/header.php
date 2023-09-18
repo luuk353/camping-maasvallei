@@ -1,14 +1,14 @@
 <nav class="header">
-    <h1>Klachten</h1>
-    <h1>Agenda</h1>
-    <h1>Welkom</h1>
-    <h1>Omgeving</h1>
-    <h1>Kampeerplaatsen</h1>
-    <h1>Faciliteiten</h1>
-    <h1>Fotogalerij</h1>
-    <h1>Aangesloten bij</h1>
-    <h1>Tarieven</h1>
-    <h1>Reserveren</h1>
-    <h1>Bistro</h1>
-    <a href="./login.php"><h1>Inloggen</h1></a>
+    <a href="#"><h3>Welkom</h3></a>
+    <a href="#"><h3>Kampeerplaatsen</h3></a>
+    <a href="#"><h3>Faciliteiten</h3></a>
+    <a href="#"><h3>Fotogalerij</h3></a>
+    <a href="#"><h3>Reserveren</h3></a>
+    <a href="#"><h3>Klachten</h3></a>
+    
+    <!-- Alleen te zien als je niet ingelogd bent -->
+    <a href="./login.php"><h3>Inloggen</h1></a>
+
+    <!-- Alleen voor medewerkers te zien -->
+    <a href="#"><h3>Agenda</h3></a>
 </nav>
