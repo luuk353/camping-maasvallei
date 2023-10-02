@@ -10,14 +10,35 @@
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     height: 10vh;
     padding: 10px;
-    margin-bottom: 50px;
-    background-color: grey;
+    background-color: white;
+}
+
+.header .login-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 20%;
+    margin-left: 40px;
+}
+
+.header .login-link svg {
+    height: 3vh;
+}
+
+.header .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
 }
 
 .header a:link, .header a:visited,
