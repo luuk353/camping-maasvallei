@@ -46,3 +46,16 @@
     text-decoration: none;
     color: black;
 }
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    background: url('./img/banner.png');
+    background-size: 100% auto;
+}
+
+.banner h2 {
+    color: white;
+    margin: auto 50px;
+}
