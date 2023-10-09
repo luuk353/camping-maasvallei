@@ -14,7 +14,7 @@
         <a href="./fotogalerij.php"><p>Fotogalerij</p></a>
         <a href="#"><p>Reserveren</p></a>
         <a href="#"><p>Foto gallerij</p></a>
-        <a href="#"><p>Klachten</p></a>
+        <a href="./klachten.php"><p>Klachten</p></a>
     </div>
 
 </nav>
