@@ -29,16 +29,17 @@ include_once "includes/header.php";
             <div class="titel">
                 <h1>Reserveren</h1>
             </div>
-            <form action="">
+            <form action="#">
                 <p>Naam</p>
                 <input type="text">
                 <p>E-mail</p>
                 <input type="text">
                 <p>Telefoonnummer</p>
                 <input type="text">
+                <input type="submit" value = "fuck you aiden"  action = "SUBMIT">
             </form>
         </div>
-    
+
     </div>
     
 </body>
