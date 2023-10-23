@@ -14,6 +14,8 @@
         <a href="#"><p>Reserveren</p></a>
         <a href="#"><p>Foto gallerij</p></a>
         <a href="./klachten.php"><p>Klachten</p></a>
+        <a href="#"><p>kampeer plaatsen</p></a>
+
         <!-- Alleen voor medewerkers te zien -->
         <a href="./agenda.php"><p>Agenda</p></a>
     </div>
