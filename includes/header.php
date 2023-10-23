@@ -12,9 +12,9 @@
     <div class="links">
         <a href="./index.php"><p>Welkom</p></a>
         <a href="#"><p>Fotogalerij</p></a>
-        <a href="#"><p>Reserveren</p></a>
+        <a href="./reserveren.php"><p>Reserveren</p></a>
         <a href="#"><p>Foto gallerij</p></a>
         <a href="#"><p>Klachten</p></a>
     </div>
 
-</nav>
+</nav>  
