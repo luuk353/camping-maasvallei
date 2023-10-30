@@ -1,0 +1,48 @@
+body {
+  background-color: #d9d9d9;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 200px;
+}
+
+.klachten {
+  width: 15%;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.klachten img {
+  width: 100%;
+}
+
+.klachten div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+form label,
+form input[type="submit"] {
+  margin-top: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 2px;
+}
