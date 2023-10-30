@@ -1,19 +1,28 @@
 <?php
-session_start();
-include "connect.php";
-$stmt = $connect->prepare("SELECT * FROM gebruikers");
-$stmt->execute();
-if ($stmt->rowCount() > 0) {
-    while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        if ($_POST["username"] == $result["username"]){
-            if ($_POST["password"] == $result["password"]){
-                $_SESSION["username"] = $result["username"];
-                $_SESSION["rol"] = $result["rol"];
-            }
+include_once("connect.php");
+
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $sql = "SELECT * FROM gebruikers WHERE username = :username";
+    $stmt = $connect -> prepare($sql);
+    $stmt -> bindParam(":username", $_POST["username"]);
+    $stmt -> execute();
+    $result = $stmt -> fetchAll();
+
+    foreach($result as $res) {
+        if($_POST["password"] == $res["password"]) {
+            $_SESSION["username"] = $res["username"];
+            $_SESSION["rol"] = $res["rol"];
+            break;
         }
     }
 }
-echo "het werkt junkie";
-// header("Location: ../index.php");
-exit;
-                     ?>
+
+if(isset($_SESSION["rol"]) && $_SESSION["rol"] == 'admin') {
+    header("Location: ../admin.php");
+} elseif (isset($_SESSION["rol"]) && $_SESSION["rol"] == 'werknemer') {
+    header("Location: ../agenda.php");
+} else {
+    header("Location: ../index.php");
+}
+?>

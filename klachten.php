@@ -8,7 +8,13 @@
   <link rel="stylesheet" href="klachten.css">
 </head>
 <body>
-  <?php include_once('includes/header.php') ?>
+  <?php
+  include_once('includes/header.php');
+
+  if(!isset($_SESSION["username"])) {
+    header("Location: login.php");
+  }
+  ?>
   
   <div class="banner">
     <h2>Klachten</h2>

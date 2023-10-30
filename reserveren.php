@@ -1,7 +1,3 @@
-<?php
-include_once "includes/header.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +8,14 @@ include_once "includes/header.php";
     <title>Document</title>
 </head>
 <body>
+    <?php
+    include_once "includes/header.php";
+
+    if(!isset($_SESSION["username"])) {
+        header("Location: login.php");
+    }
+    ?>
+
     <div class = "container"> 
         <div class="steps">
             <p id = "stepstext">
