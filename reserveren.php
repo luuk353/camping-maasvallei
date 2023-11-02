@@ -33,14 +33,14 @@
             <div class="titel">
                 <h1>Reserveren</h1>
             </div>
-            <form action="#">
+            <form action="./php/reserveren.php" method="post">
+                <p> kies de datum waarop u wilt reserveren</p>
+                <input type="date" name="datum" id="datum">
                 <p>Naam</p>
-                <input type="text">
+                <input type="text" name= "klantnaam">
                 <p>E-mail</p>
-                <input type="text">
-                <p>Telefoonnummer</p>
-                <input type="text">
-                <input type="submit" value = "fuck you aiden"  action = "SUBMIT">
+                <input type="email" name = "email">
+                <input type="submit" name="submit" value = "reserveren"  action="submit">
             </form>
         </div>
 
