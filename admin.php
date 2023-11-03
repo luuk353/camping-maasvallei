@@ -15,27 +15,32 @@ include_once('php/connect.php');
 <body>
     <?php include_once "includes/header.php"; ?>
 
-    <?php 
+    <?php
     $sql = "SELECT * FROM reserveringen";
     $stmt = $connect -> prepare($sql);
     $stmt -> execute();
     $result = $stmt -> fetchAll();
 
-    foreach($result as $res) { 
-        echo "<table>";
-        echo "<tr>";
-        echo "<td>{$res['datum']}</td>";
-        echo "<td>{$res['klantnaam']}</td>";
-        echo "<td>{$res['telefoonnummer']}</td>";
-        echo "<td>{$res['e-mail']}</td>";
-        echo "<td>{$res['reserveringsID']}</td>";
-        echo "<td>{$res['locatie']}</td>";
-        echo "</tr>";
-        echo "</table>";
-    }
-    
-
-     ?>
-
+    ?>
+    <!-- Reserveringen -->
+    <h3>Reserveringen</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Klantnaam</th>
+            <th>Email</th>
+            <th>Begindatum</th>
+            <th>Einddatum</th>
+        </tr>
+        <?php foreach($result as $res) { ?>
+            <tr>
+                <td><?php echo $res['reserveringsID'] ?></td>
+                <td><?php echo $res['klantnaam'] ?></td>
+                <td><?php echo $res['email'] ?></td>
+                <td><?php echo $res['begindatum'] ?></td>
+                <td><?php echo $res['einddatum'] ?></td>
+            </tr>
+        <?php } ?>
+    </table>
 </body>
 </html>
