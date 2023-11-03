@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 if(isset($_SESSION["rol"]) && $_SESSION["rol"] == 'admin') {
-    header("Location: ../index.php");
+    header("Location: ../admin.php");
 } elseif (isset($_SESSION["rol"]) && $_SESSION["rol"] == 'werknemer') {
     header("Location: ../agenda.php");
 } else {

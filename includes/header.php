@@ -29,5 +29,9 @@
         <?php if(isset($_SESSION["rol"]) && $_SESSION["rol"] == 'werknemer') { ?>
             <a href="./agenda.php"><p>Agenda</p></a>
         <?php } ?>
+
+        <?php if(isset($_SESSION["rol"]) && $_SESSION["rol"] == 'admin') { ?>
+            <a href="./admin.php"><p>Admin</p></a>
+        <?php } ?>
     </div>
 </nav>
