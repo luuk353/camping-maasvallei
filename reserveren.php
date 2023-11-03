@@ -17,18 +17,6 @@
     ?>
 
     <div class = "container"> 
-        <div class="steps">
-            <p id = "stepstext">
-            <br>
-            1. vul de gegevens in<br>
-            <br>
-            2. selecteerd een kampeer plek<br>
-            <br>
-            3. selecteerd de betaalmethode <br>
-            <br>
-            4. ontvang confirmatie</p>
-        </div>
-
         <div class="reserveren">
             <div class="titel">
                 <h1>Reserveren</h1>

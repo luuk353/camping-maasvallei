@@ -7,7 +7,7 @@ body {
   flex-direction: row;
   justify-content: start;
   align-items: start;
-  gap: 200px;
+  gap: 500px;
 }
 
 .klachten {
