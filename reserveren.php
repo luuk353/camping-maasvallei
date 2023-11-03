@@ -34,11 +34,13 @@
                 <h1>Reserveren</h1>
             </div>
             <form action="php/reserveren.php" method="POST">
-                <p> kies de datum waarop u wilt reserveren</p>
-                <input type="date" name="datum" id="datum">
-                <p>Naam</p>
+                <p> kies de begindatum waarop u wilt reserveren</p>
+                <input type="date" name="begindatum" id="begindatum">
+                <p>kies de Einddatum van de reservering</p>
+                <input type="date" name="einddatum" id="einddatum">
+                <p>vul hier uw naam in</p>
                 <input type="text" name= "klantnaam">
-                <p>E-mail</p>
+                <p>vul hier uw E-mail zodat we u op de hoogte kunnen houden van uw reservering</p>
                 <input type="email" name = "email">
                 <input type="submit" name="submit" value = "reserveren"  action="submit">
             </form>

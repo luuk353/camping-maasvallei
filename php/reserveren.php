@@ -2,10 +2,11 @@
 include_once("connect.php");
 
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
-    $sql = "INSERT INTO `reserveringen` (datum, klantnaam, email)
-    VALUES(:datum, :klantnaam, :email)";
+    $sql = "INSERT INTO `reserveringen` (begindatum, einddatum, klantnaam, email)
+    VALUES(:begindatum, :einddatum, :klantnaam, :email)";
     $stmt = $connect -> prepare($sql);
-    $stmt -> bindParam(":datum", $_POST["datum"]);
+    $stmt -> bindParam(":begindatum", $_POST["begindatum"]);
+    $stmt -> bindParam(":einddatum", $_POST["einddatum"]);
     $stmt -> bindParam(":klantnaam", $_POST["klantnaam"]);
     $stmt -> bindParam(":email", $_POST["email"]);
     $stmt -> execute();
