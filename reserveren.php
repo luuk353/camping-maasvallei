@@ -33,7 +33,7 @@
             <div class="titel">
                 <h1>Reserveren</h1>
             </div>
-            <form action="./php/reserveren.php" method="post">
+            <form action="php/reserveren.php" method="POST">
                 <p> kies de datum waarop u wilt reserveren</p>
                 <input type="date" name="datum" id="datum">
                 <p>Naam</p>
