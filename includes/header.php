@@ -26,8 +26,13 @@
         <a href="./kampeer-plaatsen.php"><p>Kampeer Plaatsen</p></a>
 
         <!-- Alleen voor werknemers te zien -->
-        <?php if(isset($_SESSION["rol"]) && $_SESSION["rol"] == 'werknemer') { ?>
+        <?php if(isset($_SESSION["rol"]) && ($_SESSION["rol"] == 'werknemer' || $_SESSION["rol"] == 'admin')) { ?>
             <a href="./agenda.php"><p>Agenda</p></a>
+        <?php } ?>
+        
+        <!-- Alleen voor werknemers te zien -->
+        <?php if(isset($_SESSION["rol"]) && ($_SESSION["rol"] == 'werknemer' || $_SESSION["rol"] == 'admin')) { ?>
+            <a href="./klachtenlijst.php"><p>Klachtenlijst</p></a>
         <?php } ?>
 
         <?php if(isset($_SESSION["rol"]) && $_SESSION["rol"] == 'admin') { ?>
