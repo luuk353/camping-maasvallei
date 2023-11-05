@@ -1,4 +1,10 @@
+body {
+    background-color: #d9d9d9;
+  }
+
 .login {
+    margin-top: 50px;
+    border-radius: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +16,8 @@ form {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 50%;
+    width: 30%;
+    height: 500px;
     padding: 10px;
     background-color: gray;
 }

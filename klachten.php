@@ -8,7 +8,13 @@
   <link rel="stylesheet" href="klachten.css">
 </head>
 <body>
-  <?php include_once('includes/header.php') ?>
+  <?php
+  include_once('includes/header.php');
+
+  if(!isset($_SESSION["username"])) {
+    header("Location: login.php");
+  }
+  ?>
   
   <div class="banner">
     <h2>Klachten</h2>
@@ -27,17 +33,17 @@
       </div>
     </div>
 
-    <form action="php/klachten.php">
+    <form action="php/klachten.php" method = "POST">
       <label for="name">Naam:</label>
-      <input type="text" name="name" id="name">
-
+      <input type="text" name="klantnaam" id="klantnaam">
       <label for="email">Email:</label>
       <input type="email" name="email" id="email">
+      <p>vul hier het onderwerp in</p>
+      <input type="text" name="onderwerp" id="onderwerp">
+      <label for="bericht">Omschrijving:</label>
+      <textarea name="bericht" id="bericht" cols="30" rows="10"></textarea>
 
-      <label for="description">Omschrijving:</label>
-      <textarea name="description" id="description" cols="30" rows="10"></textarea>
-
-      <input type="submit" value="Versturen">
+      <input type="submit" name="submit" value="Versturen" action="sumbit">
     </form>
   </div>
 </body>

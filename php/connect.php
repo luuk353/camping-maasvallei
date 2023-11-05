@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $host = 'localhost';
 $db = 'camping_maasvallei';
 $user = 'root';

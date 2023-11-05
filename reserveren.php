@@ -1,7 +1,3 @@
-<?php
-include_once "includes/header.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,31 +8,29 @@ include_once "includes/header.php";
     <title>Document</title>
 </head>
 <body>
-    <div class = "container"> 
-        <div class="steps">
-            <p id = "stepstext">
-            <br>
-            1. vul de gegevens in<br>
-            <br>
-            2. selecteerd een kampeer plek<br>
-            <br>
-            3. selecteerd de betaalmethode <br>
-            <br>
-            4. ontvang confirmatie</p>
-        </div>
+    <?php
+    include_once "includes/header.php";
 
+    if(!isset($_SESSION["username"])) {
+        header("Location: login.php");
+    }
+    ?>
+
+    <div class = "container"> 
         <div class="reserveren">
             <div class="titel">
                 <h1>Reserveren</h1>
             </div>
-            <form action="#">
-                <p>Naam</p>
-                <input type="text">
-                <p>E-mail</p>
-                <input type="text">
-                <p>Telefoonnummer</p>
-                <input type="text">
-                <input type="submit" value = "fuck you aiden"  action = "SUBMIT">
+            <form action="php/reserveren.php" method="POST">
+                <p> kies de begindatum waarop u wilt reserveren</p>
+                <input type="date" name="begindatum" id="begindatum">
+                <p>kies de Einddatum van de reservering</p>
+                <input type="date" name="einddatum" id="einddatum">
+                <p>vul hier uw naam in</p>
+                <input type="text" name= "klantnaam">
+                <p>vul hier uw E-mail zodat we u op de hoogte kunnen houden van uw reservering</p>
+                <input type="email" name = "email">
+                <input type="submit" name="submit" value = "reserveren"  action="submit">
             </form>
         </div>
 
